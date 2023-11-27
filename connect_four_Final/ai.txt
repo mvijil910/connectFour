@@ -1,0 +1,20 @@
+Did you attempt to make your computer player very smart -- i.e., do something more clever than just pick a random legal move?
+If so, were you able to accomplish this? Is your computer player as smart as you would like?
+How did you determine which piece to play next? Tell us about your “pick next move” algorithm
+How often did your computer program beat you, or your friends, or whoever tested it out for you?
+How would you improve it in the future?
+
+I used the minimax algorithm to maximize the AIs score and minimize the user's score. My computer has beaten me (the user)
+multiple times, so it is fairly smart. I am able to make it more robust by chaning the AI_DEPTH constant, which gives the AI
+the number of future moves it should check. For instance, for an AI_DEPTH of 5, the AI will check 5 moves ahead. However, 
+the higher the AI_DEPTH, the slower the AI works. I chose an AI_DEPTH of 5 so that it could still move fairly quickly. 
+
+For the find_best_move algorithm, the AI stored in the memo dictionary all the spaces that were already taken with 1's for the 
+AI's chip and 2's for the user's chips. The AI would then be able to use this to determine the spaces on the board that were 
+taken vs. empty spaces. Using the 1's, the AI can look at the maximize portion of the minimax algorithm to identify the best
+space on the board to place its chip. 
+
+My program was able to beat me 3 out of 4 times. I was able to beat it a few times using the diagonal lines, but it was fairly
+robust or I'm a bad Connect 4 player. My mom also tested out my game and it was able to beat her as well. In order to improve my AI further, I would find a way to increase the AI_DEPTH value 
+and improve the algorithm's evaluations to be faster. I could potentially use binary comparison's for the future state of my 
+Connect 4 game to improve the performance.  
